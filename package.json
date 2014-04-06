@@ -1,0 +1,19 @@
+{
+  "name": "lab2",
+  "version": "0.0.0",
+  "description": "nwen304 lab2",
+  "main": "quote.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heroku",
+    "githun"
+  ],
+  "author": "Zhi Rong",
+  "license": "ISC",
+  "dependencies": {
+    "logfmt": "^1.1.2",
+    "express": "^3.5.1"
+  }
+}

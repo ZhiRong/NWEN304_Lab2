@@ -23,8 +23,8 @@
         <input name="text-1" id="text1" value="1" type="text">
         <input type="submit" value="Submit Button" id="button1" />
 
-	<!-- put the result here -->
-	<div id="result"  class="functions"></div>
+<!-- put the result here -->
+<div id="result" class="functions"></div>
 
         <label for="text-2">Add a new quote:</label>
         <input type="submit" value="Submit Button" id="button2" />
@@ -48,7 +48,7 @@ $(document).bind('pageinit', function() {
   $( "#button1" ).bind( "click", function(event, ui) {
     var q = $("#text1").val();
     alert("Click "+q);
-    var jsonUrl = "http://gentle-escarpment-3329.herokuapp.com/quote/"+q;
+    var jsonUrl = "http://nwen304lab2.herokuapp.com/quote/"+q;
     alert("Fetching result from "+jsonUrl);
     $.get(jsonUrl, function(data) {
       alert(data.author);
@@ -59,7 +59,7 @@ $(document).bind('pageinit', function() {
 
   $( "#button2" ).bind( "click", function(event, ui) {
     alert("Posting a new quote");
-    var jsonUrl = "http://gentle-escarpment-3329.herokuapp.com/quote";
+    var jsonUrl = "http://nwen304lab2.herokuapp.com/quote/";
     var newQuote = { "author" : "foo", "text" : "some text" };
     $.post(jsonUrl,newQuote, function(data) {
       alert("Added quote number " + data.pos + " " + data.author + " " + data.text);
@@ -70,4 +70,3 @@ $(document).bind('pageinit', function() {
 </script>
 </body>
 </html>
-
